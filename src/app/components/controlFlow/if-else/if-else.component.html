@@ -1,0 +1,64 @@
+
+<div class="h-50 bg-secondary p-2 rounded text-light">
+    <h1>Control Flow works!</h1>
+    <h3>&#64;if, &#64;else  </h3>
+    
+</div>
+
+<div class="row">
+    <div class="col-3 text-center">
+        @if (isdiv1Visisble) {
+            <div class="text-center bg-danger p-3" >Div1</div>
+        }
+        
+        <button class="btn btn-secondary m-2" (click)="showdiv()" >show</button>
+        <button class="btn btn-primary m-2"  (click)="hidediv()">hide</button>
+    </div>
+    <div class="col-3 text-center" >
+        @if (isdiv2Visisble) {
+            <div class="text-center bg-primary p-3" >Div2</div>
+        }
+        @else {
+            <div class="text-center  p-3 bg-danger" >Div2</div>
+        }
+        
+        <button class="btn btn-success m-2" (click)="toggleDiv2()">Toggle</button>
+
+    </div>
+    <div class="col-3 text-center">
+        @if (num1==num2) {
+            <div class="text-center bg-secondary p-3" >Div3</div>
+        }
+        
+        <input type="text" [(ngModel)]="num1">
+        <input type="text" [(ngModel)]="num2" >
+
+    </div>
+    <div class="col-3 text-center">
+        @if (selectedStatus == "Active") {
+            <div class="text-center bg-warning p-3" >Status Active</div>
+        } @else if (selectedStatus == "De-Active") {
+            <div class="text-center bg-warning p-3" >Status De-Active</div>
+        } @else if (selectedStatus == "Pending") {
+            <div class="text-center bg-warning p-3" >Status Pending</div>
+        }@else {
+            <div class="text-center bg-warning p-3" >Status not Selected</div>
+        }
+        
+        <input type="checkbox"  class="m-2">
+        <select name="" id="" [(ngModel)]="selectedStatus"  >
+            <option value="">select</option>
+            <option value="Active">Active</option>
+            <option value="De-Active">De-Active</option>
+            <option value="Pending">Pending</option>
+        </select>
+
+    </div>
+</div>
+
+<div class="w-100 p-3 text-center bg-danger">
+    <select name="" id="">
+        <option value=""></option>
+    </select>
+</div>
+

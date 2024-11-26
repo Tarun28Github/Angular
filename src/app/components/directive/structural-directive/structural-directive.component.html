@@ -1,0 +1,70 @@
+
+<div class="h-50 bg-secondary p-2 rounded text-light">
+    <h1>structural-directive works!</h1>
+    <h3>*ngIf,*ngFor..</h3>
+    <button  class="btn btn-success"  (click)="goToAttribute()">
+        Go to  Attribute Directive from .ts
+    </button>
+</div>
+
+<div class="row">
+    <div class="col-3 text-center">
+        <div class="text-center bg-danger p-3" *ngIf="isDiv1Visible">Div1</div>
+        <button class="btn btn-secondary m-2" (click)="showdiv1()">show</button>
+        <button class="btn btn-primary m-2" (click)="hidediv1()">hide</button>
+    </div>
+    <div class="col-3 text-center" >
+        <div class="text-center bg-primary p-3" *ngIf="isDiv2Visible">Div2</div>
+        <button class="btn btn-success m-2" (click)="toggleDiv2()">Toggle</button>
+
+    </div>
+    <div class="col-3 text-center">
+        <div class="text-center bg-secondary p-3" *ngIf="num1 == num2">Div3</div>
+        <input type="text" [(ngModel)]="num1"  placeholder="num1" />
+        <input type="text" [(ngModel)]="num2" placeholder="num1">
+
+    </div>
+    <div class="col-3 text-center">
+        <div class="text-center bg-warning p-3" *ngIf="isSelectedState == 'india'">Div4</div>
+        <input type="checkbox" [(ngModel)]="isSelect" class="m-2">
+        <select name="" id="" [(ngModel)]="isSelectedState" >
+            <option value="">select</option>
+            <option value="usa">usa</option>
+            <option value="india">india</option>
+            <option value="china">china</option>
+        </select>
+
+    </div>
+</div>
+
+<div class="w-100 p-3 text-center bg-danger">
+    <select name="" id="">
+        <option value="" *ngFor="let stud of StudentList" [value]=stud.StudId>{{stud.name}}</option>
+    </select>
+</div>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    SrNO
+                </td>
+        
+                <td>id</td>
+                <td>name</td>
+                <td>city</td>
+                <td>Status</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let stud of StudentList;let sr= index">
+                <td>{{sr+1}}</td>
+                <td>{{stud.StudId}}</td>
+                <td>{{stud.name}}</td>
+                <td>{{stud.city}}</td>
+                <td *ngIf="stud.isActive == false">De-Active</td>
+                <td *ngIf="stud.isActive == true">Active</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,77 @@
+<p>data-binding works!</p>
+
+<div class="row">
+    <div class="col-4">one  way data binding from .ts to .html
+    </div>
+    <div class="col-4 ">
+
+        
+       
+    </div>
+    <div class="col-4">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-4 bg-success">
+        interpolation
+        <h1>{{courseName}}</h1>
+        <h1>{{inputType}}</h1>
+        <input type="text" value="{{courseName}}" placeholder="enter text"/>
+        <input type="{{inputType}}">
+    </div>
+    <div class="col-4">
+        property binding
+
+        <div [class]="className">{{courseName}}</div>
+        <input type="text" [value]="courseName"/>
+        <input [type]="inputType">
+
+    </div>
+    <div class="col-4">
+        <button class="btn btn-success" (click)="showAlert('welcome user')">show welcome</button>
+
+        <span (click)="showAlert('hellow')">Click me</span>
+    </div>
+    
+</div>
+<div>
+    Two  way data binding from .ts to .html
+</div>
+
+<div class="row">
+    <div class="col-4">
+   
+    <button class="btn btn-success" (click)="changeCourceName()">change Cource</button>
+    </div>
+    <div class="col-4 ">
+        two way binding using ngModel
+        <input type="text" [(ngModel)]="courseName" />
+        {{courseName}}
+       
+        <select [(ngModel)]="selectState" >
+            <option value="">select </option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="goa">goa</option>
+            <option value="pune">pune</option>
+            <option value="gujarat">gujarat</option>
+        </select>
+
+        <input type="checkbox" [(ngModel)] ="inputType"><input>
+    </div>
+    <div class="col-4">
+
+        showing signal
+        <div class="bg-secondary">
+           <h1>{{firstName()}}</h1> 
+        </div>
+        <button
+            type="button"
+            class="btn btn-outline-primary"
+            (click)="changeSignalName()"
+        >
+            Change SignalName
+        </button>
+        
+    </div>
+</div>

@@ -1,0 +1,101 @@
+<div class="h-50 bg-secondary p-2 rounded text-light">
+    <h1><i class="mdi mdi-account-reactivate-outline:"></i> Reactive Form works!</h1>
+    <h3>using .ts file</h3>  
+</div>
+<form class="row g-3 needs-validation" novalidate [formGroup]="StudentForm">
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">First name</label>
+      <input type="text" class="form-control" id="validationCustom01" value="Mark" required formControlName="firstName">
+      <!-- <div class="valid-feedback">
+        Looks good!
+      </div> -->
+      <div class="text-danger">
+        @if ((StudentForm.touched || StudentForm.dirty) && StudentForm.controls['firstName'].errors?.['required']) {
+            <span>This is required</span>
+        }
+        @else if (StudentForm.controls['firstName'].errors?.['minlength']) {
+            <span>min 4 char</span>
+        }
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Last name</label>
+      <input type="text" class="form-control" id="validationCustom02" value="Otto" required   formControlName="lastName"/>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustomUsername" class="form-label">Username</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend">&#64;</span>
+        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required  formControlName="userName"/>
+        <!-- <div class="invalid-feedback">
+          Please choose a username.
+        </div> -->
+        <div class="text-danger">
+            @if ((StudentForm.touched || StudentForm.dirty) && StudentForm.controls['userName'].errors?.['required']) {
+                <span>This is required</span>
+            }@else if ((StudentForm.touched || StudentForm.dirty) && StudentForm.controls['userName'].errors?.['email']) {
+                <span>invalid value</span>
+            }
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom03" class="form-label">City</label>
+      <input type="text" class="form-control" id="validationCustom03" required  formControlName="city"/>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationCustom04" class="form-label">State</label>
+      <select class="form-select" id="validationCustom04" required  formControlName="state">
+        <option selected disabled value="">Choose...</option>
+        <option value="jaipur">jaipur</option>
+        <option value="pune">pune</option>
+        <option value="mumbai">mumbai</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationCustom05" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="validationCustom05" required  formControlName="zipcode"/>
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required  formControlName="isAcceptTerms"/>
+        <label class="form-check-label" for="invalidCheck">
+          Agree to terms and conditions
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary me-1" type="submit" (click)="onSubmit()" [disabled]="StudentForm.invalid">Submit form</button>
+      <button class="btn btn-secondary" type="reset">Reset form</button>
+    </div>
+  </form>
+
+  <div class="col-4">
+    {{formValue| json}}
+  </div>
+
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" >
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>

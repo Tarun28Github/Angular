@@ -1,0 +1,107 @@
+
+<div class="h-50 bg-secondary p-2 rounded text-light">
+    <h1>Control Flow works!</h1>
+    <h3>&#64; For ,&#64; SwitchCase </h3>  
+</div>
+<div class="row">
+    <div class="col-3">
+        <ul>
+            @for (item of City; track $index) {
+                <li>{{item}}</li>
+            }
+
+        </ul>
+    </div>
+
+    <div class="col-3">
+        <Select>
+            <option value="">Select</option>
+
+            @for (item of City; track $index) {
+                <Option value="{{item}}">
+                    {{item}}
+                </Option>
+            }
+            
+        </Select>
+    </div><div class="col-3">
+        <Select>
+            <option value="">Select</option>
+            @for (item of StudentList; track $index) {
+                <Option value="{{item.name}}">
+                {{item.name}}
+            </Option>
+        }
+            
+        </Select>
+    </div>
+</div>
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>
+                    SrNO
+                </td>
+        
+                <td>id</td>
+                <td>name</td>
+                <td>city</td>
+                <td>Status</td>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of StudentList; track $index) {
+                <tr>
+                    <td>{{$index+1}}</td>
+                    <td>{{item.StudId}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.city}}</td>
+                    <td>{{item.isActive}}</td>
+                    
+                    
+                </tr>
+            }
+            
+            
+        </tbody>
+    </table>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <input type=" text" class="p-2 text-center" [(ngModel)]="inputNum" />
+    </div>
+    <div class="col-3">
+    @switch (inputNum) {
+        @case ("1") {
+            <div class="bg-warning p-3 text-center">Monday</div>
+        }@case ("2") {
+            <div class="bg-warning p-3 text-center">Tueday</div>
+
+        }@case ("3") {
+            <div class="bg-warning p-3 text-center">Wednesday</div>
+
+        }@case ("4") {
+            <div class="bg-warning p-3 text-center">Thursday</div>
+
+        }@case ("5") {
+            <div class="bg-warning p-3 text-center">Friday</div>
+
+        }@case ("6") {
+            <div class="bg-warning p-3 text-center">Satday</div>
+
+        }@case ("7") {
+            <div class="bg-warning p-3 text-center">Sunday</div>
+
+        }
+        @default {
+            <div class="bg-warning p-3 text-center">Invalid Input</div>
+            
+        }
+        
+    }
+    
+
+</div>
+</div>

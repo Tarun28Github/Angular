@@ -1,0 +1,24 @@
+<p>get-api works!</p>
+<!-- creating button for get api -->
+ <div class="row">
+     <div class="col-2">
+         <button class="btn btn-success" (click)="getAllUser()">Get Users</button>
+         <button class="btn btn-success" (click)="getAllCustomers()">Get All Customers</button>
+    </div>
+     <div class="col-3">
+
+        <select class="form-select" name="" id="">
+           @for (item of userList; track $index) {
+            <option value="">{{item.name}}</option>}
+        </select>
+
+     </div>
+     <div class="col-3">
+
+        <select class="form-select" name="" id="">
+           @for (item of coustomerList; track $index) {
+            <option value="">{{item.userName}}</option>}
+        </select>
+        
+     </div>
+ </div>

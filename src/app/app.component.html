@@ -1,65 +1,94 @@
-
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/new_component">NewComponent</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/add_employee">NewEmployee</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/data_binding">DataBinding</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/pipe">Pipe</a>
-          </li>
-          
-          <div class="dropdown me-2 ">
-            <button class="dropbtn btn rounded">ControlFlow</button>
-            <div class="dropdown-content">
-              <a routerLink="/if_else">If_Else</a>
-              <a routerLink="/for_switch">For_Switch</a>
-            </div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/new_component"
+            >NewComponent</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/add_employee">NewEmployee</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/data_binding">DataBinding</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/pipe">Pipe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/service">Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/nglifecycle">NgLifecylce</a>
+        </li>
+        <div class="dropdown me-2">
+          <button class="dropbtn btn rounded">ControlFlow</button>
+          <div class="dropdown-content">
+            <a routerLink="/if_else">If_Else</a>
+            <a routerLink="/for_switch">For_Switch</a>
           </div>
-          <div class="dropdown me-2 ">
-            <button class="dropbtn btn rounded">Directive</button>
-            <div class="dropdown-content">
-              <a routerLink="/attribute_directive">Attribute Directive</a>
-              <a routerLink="/structural_directive">Structural Directive</a>
-            </div>
+        </div>
+        <div class="dropdown me-2">
+          <button class="dropbtn btn rounded">Directive</button>
+          <div class="dropdown-content">
+            <a routerLink="/attribute_directive">Attribute Directive</a>
+            <a routerLink="/structural_directive">Structural Directive</a>
+            <a class="nav-link" routerLink="/ngTemplate">NgTemplate</a>
+            <a class="nav-link" routerLink="/ngContainer">NgContainer</a>
           </div>
-          <div class="dropdown me-2 ">
-            <button class="dropbtn btn rounded">Form</button>
-            <div class="dropdown-content">
-              <a routerLink="/reactive_form">Relative Form Validation</a>
-              <a routerLink="/template_form">Template Form Validation</a>
-            </div>
+        </div>
+        <div class="dropdown me-2">
+          <button class="dropbtn btn rounded">Form</button>
+          <div class="dropdown-content">
+            <a routerLink="/reactive_form">Relative Form Validation</a>
+            <a routerLink="/template_form">Template Form Validation</a>
           </div>
-          <div class="dropdown me-2 ">
-            <button class="dropbtn btn rounded">apiIntegration</button>
-            <div class="dropdown-content">
-              <a routerLink="/get_api">getApi</a>
-              <a routerLink="/post_api">putApi</a>
-              <a routerLink="/put_delete_api">putdeleteApi</a>
-              
-            </div>
+        </div>
+        <div class="dropdown me-2">
+          <button class="dropbtn btn rounded">apiIntegration</button>
+          <div class="dropdown-content">
+            <a routerLink="/get_api">getApi</a>
+            <a routerLink="/post_api">putApi</a>
+            <a routerLink="/put_delete_api">putdeleteApi</a>
           </div>
-
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+        </div>
+        <div class="dropdown me-2">
+          <button class="dropbtn btn rounded">Input&Output</button>
+          <div class="dropdown-content">
+            <a routerLink="/comp1">comp1</a>
+            <a routerLink="/comp2">comp2</a>
+          </div>
+        </div>
+      </ul>
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
-  </nav>
-
-  <div class="container">
-    <router-outlet></router-outlet>
   </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

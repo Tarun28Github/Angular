@@ -1,0 +1,14 @@
+<p>comp2 works!</p>
+<!-- IMP here parent comp is comp2 and chile componects are alertcomp and mybuttoncomponent -->
+ <!-- data sending from [comp2 - ->[alert][mybtn]] we use input  -->
+  <!-- data sending form [comp2 <-- [alert][mybtn]] we use output -->
+
+  <app-alert [message]="'this is comp2'"  [classtype]="'danger'"></app-alert><!--  to add app-alert element first we need to import in comp1.ts file -->
+<!-- here string value wil written inside "'value'"  else it will give error-->
+
+<app-mybutton [btnClass]="'btn btn-success'" [btnText]="'click me'" (onBtnClick)="getData($event)" ></app-mybutton><!-- to catch the data send by child component always use $event   -->
+
+
+<div class="container">
+    <h1>{{btnData}} </h1>
+</div>

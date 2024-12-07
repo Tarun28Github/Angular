@@ -1,0 +1,35 @@
+<div class="h-50 bg-secondary p-2 rounded text-light">
+    <h1>NgTemplate works!</h1>
+</div>
+
+<div class="row">
+    <div class="col-3 text-center bg-danger p-3 rounded mt-2" *ngIf="isUserLoggedIn; else notLogged ">
+        {{loggedInUserName}}
+    </div>
+   
+    <ng-template #notLogged >
+        <div class="col-3 text-center bg-primary p-3 rounded mt-2" >
+            <span>user not logged in</span>
+        </div>
+    </ng-template>
+
+    <div class="col-4">
+        <ng-template #dynamictem>
+            <p>Hi whats form dynamcic template</p>
+        </ng-template>
+    </div>
+    <div class="col-4">
+        <div #dynamicContainer >
+
+        </div>
+    </div>
+
+</div>
+
+<div class="row pt-3">
+    <div class="col-3 text-center">
+   
+        <button class="btn btn-danger" (click)="loadTemplate()">LoadContent</button>
+
+    </div>
+</div>

@@ -7,11 +7,17 @@ import { ForSwitchComponent } from './components/controlFlow/for-switch/for-swit
 import { IfElseComponent } from './components/controlFlow/if-else/if-else.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { AttributeDirectiveComponent } from './components/directive/attribute-directive/attribute-directive.component';
+import { NgContainerComponent } from './components/directive/ng-container/ng-container.component';
+import { NgTemplateComponent } from './components/directive/ng-template/ng-template.component';
 import { StructuralDirectiveComponent } from './components/directive/structural-directive/structural-directive.component';
 import { ReactiveFromValidationComponent } from './components/form/reactive-from-validation/reactive-from-validation.component';
 import { TemplateFormValidationComponent } from './components/form/template-form-validation/template-form-validation.component';
+import { Comp1Component } from './components/Input-output/comp1/comp1.component';
+import { Comp2Component } from './components/Input-output/comp2/comp2.component';
 import { NewComponentComponent } from './components/new-component/new-component.component';
+import { NgLifeCycleComponent } from './components/ng-life-cycle/ng-life-cycle.component';
 import { PipeComponent } from './components/pipe/pipe.component';
+import { ServiceComponentComponent } from './components/service-component/service-component.component';
 
 export const routes: Routes = [
     {
@@ -65,5 +71,29 @@ export const routes: Routes = [
     {
         path : 'put_delete_api',
         component : PutDeleteApiComponent
+    },
+    {
+        path : 'service',
+        component : ServiceComponentComponent
+    },
+    {
+        path: 'comp1',
+        component : Comp1Component
+    },
+    {
+        path: 'comp2',
+        component : Comp2Component
+    },
+    {
+        path : 'nglifecycle',
+        component : NgLifeCycleComponent
+    },
+    {
+        path : 'ngTemplate',
+        component : NgTemplateComponent
+    },
+    {
+        path : 'ngContainer',
+        component : NgContainerComponent
     }
 ];

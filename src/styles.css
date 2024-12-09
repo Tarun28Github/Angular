@@ -1,9 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* Style The Dropdown Button */
-.dropbtn {
-    background-color: #255aee;
-    color: white;
-    padding: 5px;
+.dropbtn {  
+    color: rgba(0, 0, 0, 0.993);
     font-size: 16px;
     border: none;
     cursor: pointer;

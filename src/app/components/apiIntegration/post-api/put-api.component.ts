@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { UserObj } from '../../../Module/class/User';
+import { IUserList } from '../../../Module/interface/IUser';
 
 @Component({
   selector: 'app-put-api',
@@ -12,11 +14,12 @@ import { FormsModule } from '@angular/forms';
 export class PutApiComponent {
     http = inject(HttpClient);
    //to use put api first create obj for form and link its componet using ngform
-    userObj : any = {
-      email : '',
-      password :''
-    }
-
+    // userObj : any = {
+    //   email : '',
+    //   password :''
+    // }
+    // using class insted of any
+    userObj : UserObj  = new UserObj();
 
     saveuser(){
       debugger;
@@ -33,7 +36,7 @@ export class PutApiComponent {
         //handling error
       })
     }
-    userList: any [] = [];
+    userList: IUserList [] = [];
     getAllUser(){
       this.http.get("").subscribe((res : any)=>{
         this.userList = res;

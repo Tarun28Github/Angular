@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RxjsService } from '../../../service/rxjs.service';
 
 @Component({
   selector: 'app-if-else',
@@ -9,6 +10,20 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './if-else.component.css'
 })
 export class IfElseComponent {
+ role : string ='';
+ roleBs : string ='';
+  constructor(private http: RxjsService){ 
+    this.http.onRoleChange$.subscribe((res : string)=>{
+      debugger;
+      this.role= res;
+    })
+
+    this.http.onRoleChangeBS$.subscribe((res : string)=>{
+      debugger;
+      this.roleBs = res;
+    })
+  }
+  
 
   isdiv1Visisble : boolean = true;
 

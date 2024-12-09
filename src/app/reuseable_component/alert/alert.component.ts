@@ -15,6 +15,8 @@ export class AlertComponent implements OnChanges {
 
  @Input() classtype : string = '';
 
+ alertMode : string ='demo demo';
+
 
  ngOnChanges(changes: SimpleChanges): void {
      console.log('onChanges'); // it execute afterContentChecked is executed.

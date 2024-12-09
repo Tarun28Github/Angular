@@ -11,7 +11,7 @@
       </div> -->
       <div class="text-danger">
         @if ((fName.touched || fName.dirty) && fName.errors?.['required']) {
-          <span>This is Requred</span>
+          <span>{{validation_msg.REQUIRED}}</span>
         }
         @else  if(fName.errors?.['minlength']){
           <span>min 3 characters</span>

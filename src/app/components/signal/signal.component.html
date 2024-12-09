@@ -1,0 +1,40 @@
+<div class="contianer p-3 bg-secondary rounded text-white">
+    <h1>Signal work!</h1>
+    <h3>create Signal, update , display</h3>
+</div>
+<div class="row">
+    <div class="col-3">
+         <!-- accessing signal in .html -->
+        {{firstName()}} - {{lastname}}
+    </div>
+    <div class="col-3">
+        {{rollno()}}
+    </div>
+    <div class="col-3">
+     fullname:-   {{fullname()}}
+    </div>
+    <div class="col-3">
+        {{cityList()}}
+    </div>
+</div>
+<div  class="row">
+    <div class="col-3">
+        <button class="btn btn-primary" (click)="changename()">change Name</button>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-primary" (click)="changefname()">changefname</button>
+        <button class="btn btn-primary" (click)="changelname()">changelname</button>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-primary" (click)="addcity()">add city</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <button class="btn btn-primary" (click)="changecity()">changecity</button>
+    </div>
+    <div class="col-3">
+       stdObj :- {{stuObj().name}} - {{stuObj().city}}
+    </div>
+</div>

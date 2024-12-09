@@ -2,6 +2,7 @@ import { JsonPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { UserObj } from '../../../Module/class/User';
 
 @Component({
   selector: 'app-put-delete-api',
@@ -31,15 +32,23 @@ export class PutDeleteApiComponent {
       password : 'ccc'
     }
   ]
-  userObj : any = {
-    email : '',
-    password :''
-  }
+
+  // userObj : any = {
+  //   email : '',
+  //   password :''
+  // }
+  // creating obj of userObj class
+  userObj : UserObj = new UserObj();
   
   //for updateing user we need the object of that puticular user on the form 
 
   onEdit(item :any){
-     this.userObj = item;
+    // reinitalizeing the userObj
+   
+   // insted of this
+    //  this.userObj = item;
+    // do this
+    this.userObj = new UserObj();
   }
 
   
